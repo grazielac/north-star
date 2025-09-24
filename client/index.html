@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Frontend Example</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-    <h3></h3>
-    
+  <div class="container">
+    <h1>Send a Message to the Server</h1>
+    <form id="messageForm">
+      <input type="text" name="message" placeholder="Type your message..." required />
+      <button type="submit">Send</button>
+    </form>
+    <div id="response"></div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>

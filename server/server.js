@@ -20,7 +20,7 @@ app.post("/messages", (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-/*
+
 app.get("/", (req, res) => {
   res.send("This is the root route!");
 });
@@ -33,6 +33,7 @@ app.get("/images", async (req, res) => {
   res.json(imageData.results);
 });
 
+/*
 app.listen(8080, () => {
   console.log(`Server running on port 8080`);
 }); */
