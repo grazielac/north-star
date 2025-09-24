@@ -21,7 +21,7 @@ app.get("/images", async (req, res) => {
   const response = await fetch(API);
   const imageData = await response.json();
 
-  res.json(imageData.results); // result is a property?
+  res.json(imageData.results);
 });
 
 app.listen(8080, () => {
