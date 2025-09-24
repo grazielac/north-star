@@ -8,12 +8,19 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
+app.post("/messages", (req, res) => {
+  console.log(req.body);
+  res.json({ status: "Message received!" });
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+/*
 app.get("/", (req, res) => {
   res.send("This is the root route!");
 });
@@ -28,4 +35,4 @@ app.get("/images", async (req, res) => {
 
 app.listen(8080, () => {
   console.log(`Server running on port 8080`);
-});
+}); */
